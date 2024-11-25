@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 800px;
+  height: 698px;
+ 
+}
+.horizontal-row {
+  display: flex;
+  width: 95%;
+  height: 15%;
+  border: 4px solid black;
+  flex-direction: row;
+ 
+}
+.hr-box-1 {
+  width: 30%;
+  height: 100%;
+  border: 7px solid black;
+  background-color: rgb(229, 238, 235);
+}
+.hr-box-2 {
+  width: 40%;
+  height: 100%;
+  border: 7px solid black;
+  background-color: rgb(242, 231, 213);
+}
+.hr-box-3 {
+  width: 35%;
+  height: 100%;
+  border: 7px solid black;
+  border-right: 0;
+  background-color: rgb(242, 201, 104);
+ 
+}
+.vertical-row {
+  display: flex;
+  width: 15%;
+  height: 85%;
+  border: 7px solid black;
+  flex-direction: column;
+ 
+}
+.vr-box-1 {
+  width: 100%;
+  height: 25%;
+  border: 7px solid black;
+  border-top:0;
+  border-right: 0;
+  background-color: rgb(251, 253, 231);
+}
+.vr-box-2 {
+  width: 100%;
+  height: 45%;
+  border: 7px solid black;
+  background-color: rgb(225, 234, 229);
+  border-right: 0;
+}
+.vr-box-3 {
+  width: 100%;
+  height: 30%;
+  border: 7px solid black;
+  background-color: rgb(244,198,90);
+  border-right: 0;
+}
+
+.middle {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 80%;
+  height: 85%;
+ 
+}
+
+.middle-top-row {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.mr-t-box-1 {
+  width: 60%;
+  height: 100%;
+  border: 7px solid black;
+  background-color: rgb(214, 45, 36);
+}
+.mr-t-box-2 {
+  width: 40%;
+  height: 50%;
+  border: 7px solid black;
+  background-color: rgb(237, 204, 107);
+}
+.middle-top-row-1 {
+  display: flex;
+  width: 40%;
+  height: 50%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.mr-t-box-3 {
+  width: 50%;
+  height: 100%;
+  border: 7px solid black;
+  background-color: rgb(223, 229, 208);
+
+}
+.mr-t-box-4 {
+  width: 50%;
+  height: 100%;
+  border: 7px solid black;
+  background-color: rgb(242, 238,226);
+}
+.middle-bottom-row {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.middle-bottom-row-1 {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  border: 5px solid black;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.mr-b-box-1 {
+  width: 100%;
+  height: 70%;
+  border: 7px solid black;
+  background-color: rgb(19, 4, 9);
+  border-top:0;
+  border-right: 0;
+}
+
+.mr-b-box-2 {
+  width: 100%;
+  height: 30%;
+  border: 7px solid black;
+  background-color: rgb(227, 222, 217);
+  border-top:0;
+  border-right: 0;
+}
+.middle-bottom-row-2 {
+  display: flex;
+  width: 70%;
+  height: 85%;
+  border: 7px solid black;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.mr-b-box-3 {
+  width: 42%;
+  height: 50%;
+  border: 7px solid black;
+  background-color: rgb(192, 191, 186);
+  border-top:0;
+}
+.mr-b-box-4 {
+  width: 42%;
+  height: 30%;
+  border: 7px solid black;
+  background-color: rgb(222, 226,212);
+}
+.mr-b-box-5 {
+  width: 42%;
+  height: 20%;
+  border: 7px solid black;
+  background-color: rgb(11, 2, 5);
+}
+.mr-b-box-6 {
+  width: 58%;
+  height: 50%;
+  border: 7px solid black;
+  background-color: rgb(214, 222, 224);
+  border-top:0;
+  border-right: 0;
+}
+.mr-b-box-7 {
+  width: 58%;
+  height: 50%;
+  border: 7px solid black;
+  background-color: rgb(36, 23, 133);
+  border-right: 0;
+}
+.mr-b-box-8 {
+  width: 71%;
+  height: 15%;
+  border: 11px solid black;
+  background-color: rgb(224, 224, 223);
+  border-top:0;
+  
+}
+.vertical-row-right {
+  display: flex;
+  width: 5%;
+  height: 100%;
+  border: 7px solid black;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  top: -15%;
+  border-left: 0;
+}
+.vr-r-box-1{
+  width: 100%;
+  height: 80%;
+  border: 7px solid black;
+  background-color: rgb(252, 253, 231);
+}
+.vr-r-box-2{
+  width: 100%;
+  height: 20%;
+  border: 7px solid black;
+  background-color: rgb(215, 54, 48);
+  
+}
