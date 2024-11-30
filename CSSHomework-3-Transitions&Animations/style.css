@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 250px;
+  width: 850px;
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid;
+}
+.box1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  background-color: #dd4838;
+}
+
+.box1-loading-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 30%;
+}
+.box1-loading-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-transform: uppercase;
+  background-color: #e84c3c;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.box2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  background-color: #e84c3c;
+}
+
+.box2-loading {
+  color: white;
+  text-transform: uppercase;
+  background-color: #d47469b1;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.box3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  background-color: #e84c3c;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  width: 30%;
+  height: 10%;
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  
+}
+.circle2 {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 100%;
+}
+.circle1,
+.circle3 {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.479);
+  border-radius: 100%;
+}
+
+.box4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  background-color: #dd4838;
+}
+
+.box-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 50%;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: #da71658a;
+}
+
+.circle {
+  position: relative;
+  right: 50%;
+  bottom: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+  animation-name: around;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.box1-loading-box,
+.box2-loading,
+.box {
+  background: linear-gradient(to right, white 50%, transparent 0);
+  background-position: right;
+  background-size: 200% 100%;
+  animation-name: loading;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-iteration-count:infinite;
+  background-color: #e59d957b;
+}
+
+@keyframes loading {
+  100% {
+    background-position: left;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes around {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(65px);
+  }
+  50% {
+    transform: translate(65px, 65px);
+  }
+  75% {
+    transform: translate(0, 65px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
