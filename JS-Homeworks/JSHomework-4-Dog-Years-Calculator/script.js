@@ -6,9 +6,20 @@
 // Bonus: Make the same function work for converting dog to human years as well
 
 function ageConverter() {
-  let age = parseInt(prompt("Please enter the age you want to convert:"));
+  let age;
+  do {
+    age = prompt("Please enter the age you want to convert:");
+    if (isNaN(age) || age <= 0) {
+      alert("Invalid input. Please enter a positive number.");
+    } else {
+      age = parseInt(age);
+      break;
+    }
+  } while (true);
+
   let resultHumanYears = age * 7;
   let resultDogYears = age / 7;
-  console.log(`Your age in dog years is ${resultHumanYears}, and your age in human years is ${resultDogYears}`);
+
+console.log(`Your age in dog years is ${resultHumanYears}, and your age in human years is ${resultDogYears}`);
 }
 ageConverter();

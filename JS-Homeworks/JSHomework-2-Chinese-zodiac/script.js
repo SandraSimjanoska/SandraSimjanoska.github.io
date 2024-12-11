@@ -18,38 +18,38 @@
 let userYear = Number(
   prompt("Enter your birth year to find your Chinese Zodiac Sign:")
 );
-let sum = (userYear - 4) % 12;
+let result = (userYear - 4) % 12;
 
-if (sum === 0) {
+if (result === 0) {
  alert("Your chinese zodiac sign is: Rat!");
-} else if (sum === 1) {
+} else if (result === 1) {
    alert("Your chinese zodiac sign is: Ox!");
-} else if (sum === 2) {
+} else if (result === 2) {
    alert("Your chinese zodiac sign is: Tiger!");
-} else if (sum === 3) {
+} else if (result === 3) {
    alert("Your chinese zodiac sign is: Rabbit!");
-} else if (sum === 4) {
+} else if (result === 4) {
    alert("Your chinese zodiac sign is: Dragon!");
-} else if (sum === 5) {
+} else if (result === 5) {
    alert("Your chinese zodiac sign is: Snake!");
-} else if (sum === 6) {
+} else if (result === 6) {
    alert("Your chinese zodiac sign is: Horse!");
-} else if (sum === 7) {
+} else if (result === 7) {
    alert("Your chinese zodiac sign is: Goat!");
-} else if (sum === 8) {
+} else if (result === 8) {
    alert("Your chinese zodiac sign is: Monkey!");
-} else if (sum === 9) {
+} else if (result === 9) {
    alert("Your chinese zodiac sign is: Rooster!");
-} else if (sum === 10) {
+} else if (result === 10) {
    alert("Your chinese zodiac sign is: Dog!");
-} else if (sum === 11) {
+} else if (result === 11) {
    alert("Your chinese zodiac sign is: Pig!");
 } else {
    alert("Please enter a valid number!");
 }
 
 //Chinese zodiac with SWITCH:
-switch (sum) {
+switch (result) {
   case 0:
     alert("Your chinese zodiac sign is: Rat!");
     break;
