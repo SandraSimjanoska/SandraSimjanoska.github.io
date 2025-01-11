@@ -1,0 +1,59 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffebf0;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+  border: 1px solid #f2a7d9;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+input[type="button"] {
+  background-color: #ff66b2;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 12px;
+}
+
+input[type="button"]:hover {
+  background-color: #ff3385;
+}
+
+table {
+  width: 70%;
+  margin-top: 20px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ffccf5;
+  font-size: 16px;
+}
+
+th {
+  background-color: #ffb3d9;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #ffe6f1;
+}
+
+tr:hover {
+  background-color: #ffb3d9;
+}

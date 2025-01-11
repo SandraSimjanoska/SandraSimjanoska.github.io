@@ -4,18 +4,36 @@
 // The professor told the students that for passing the first semester they must have average of 8.
 // The student needs to know whether they have passed the semester or not. Alert on screen if the student pass or not!
 
-let grades = [10, 6, 8, 9, 6];
-let total = 0;
-for (let i = 0; i < grades.length; i++) {
-  total += grades[i];
+// let grades = [10, 6, 8, 9, 6];
+// let total = 0;
+// for (let i = 0; i < grades.length; i++) {
+//   total += grades[i];
+// }
+// let average = total / grades.length;
+// console.log(average);
+// if (average >= 8) {
+//   alert("Congratulations! You have passed the semester.");
+// } else {
+//   alert("Unfortunately, you did not pass the semester.");
+// }
+
+//fixed code
+function checkSemesterPass(grades) {
+  let total = 0;
+  for (let i = 0; i < grades.length; i++) {
+    total += grades[i];
+  }
+  let average = total / grades.length;
+  console.log(`Average Grade: ${average}`);
+  if (average >= 8) {
+    alert("Congratulations! You have passed the semester.");
+  } else {
+    alert("Unfortunately, you did not pass the semester.");
+  }
 }
-let average = total / grades.length;
-console.log(average);
-if (average >= 8) {
-  alert("Congratulations! You have passed the semester.");
-} else {
-  alert("Unfortunately, you did not pass the semester.");
-}
+
+let student1Grades = [10, 6, 8, 9, 6];
+checkSemesterPass(student1Grades);
 
 // Exercise 7
 // Make an array of ten elements. Make sure four of them to be: Null, undefined, NaN, “” and false (JavaScript falsy values).
@@ -55,30 +73,68 @@ console.log(newArray);
 //  Allow the user to insert as much todos as he/she wants. When finished adding todos, display all the todo list in the console.
 //  Use function for adding new todo, and another function for displaying all todos.
 
+// let toDoList = [];
+// function addNewTodo(todo) {
+//   toDoList.push(todo);
+// }
+// function displayToDoList() {
+//   console.log("Your To Do List:");
+//   for (let i = 0; i < toDoList.length; i++) {
+//     console.log(`${i + 1}. ${toDoList[i]}`);
+//   }
+// }
+
+// let addingToDo = true;
+// while (addingToDo) {
+//   let newTodo = prompt(
+//     "Enter your To Do \nor type 'done' to when you want to stop adding new To Dos:"
+//   );
+
+//   if (newTodo.toLowerCase() === "done") {
+//     addingToDo = false;
+//   } else {
+//     addNewTodo(newTodo);
+//   }
+// }
+// displayToDoList();
+
+//fixed code
 let toDoList = [];
 function addNewTodo(todo) {
   toDoList.push(todo);
 }
+
 function displayToDoList() {
-  console.log("Your To Do List:");
-  for (let i = 0; i < toDoList.length; i++) {
-    console.log(`${i + 1}. ${toDoList[i]}`);
+  if (toDoList.length === 0) {
+    console.log("Your To Do List is empty.");
+  } else {
+    console.log("Your To Do List:");
+    for (let i = 0; i < toDoList.length; i++) {
+      console.log(`${i + 1}. ${toDoList[i]}`);
+    }
   }
 }
 
 let addingToDo = true;
+
 while (addingToDo) {
   let newTodo = prompt(
-    "Enter your To Do \nor type 'done' to when you want to stop adding new To Dos:"
+    "Enter your To Do or type 'done' to stop adding tasks:"
   );
 
-  if (newTodo.toLowerCase() === "done") {
+  if (newTodo === null) {
+    alert("You canceled the To Do input.");
+    break;
+  } else if (newTodo.toLowerCase() === "done") {
     addingToDo = false;
+  } else if (newTodo === "") {
+    alert("To Do cannot be empty. Please enter a valid task.");
   } else {
     addNewTodo(newTodo);
   }
 }
 displayToDoList();
+
 
 // Exercise 9
 // Write a JavaScript program that will serve as a phone book.
@@ -86,20 +142,59 @@ displayToDoList();
 // When contact is added succesfully display to the user a message that the contact was added.
 // Print the phone book in the console at the end.
 
+// let phoneBook = [];
+
+// while (true) {
+//   let name = prompt("Enter the person's name\nor type 'done' to finish:");
+//   if (name.toLowerCase() === "done") {
+//     break;
+//   }
+//   let phoneNumber = prompt("Enter the phone number:");
+//   phoneBook.push({ name: name, phoneNumber: phoneNumber });
+//   console.log(`${name}'s contact has been added!`);
+// }
+// console.log("Phone Book:");
+// for (let i = 0; i < phoneBook.length; i++) {
+//   console.log(`${i + 1}. Name: ${phoneBook[i].name}, Phone: ${phoneBook[i].phoneNumber}`);
+// }
+
+//fixed
 let phoneBook = [];
 
 while (true) {
-  let name = prompt("Enter the person's name\nor type 'done' to finish:");
-  if (name.toLowerCase() === "done") {
+  let name = prompt("Enter the person's full name or type 'done' to finish:");
+  
+  if (name === null) {
+    alert("Phone book creation canceled.");
     break;
+  } else if (name.toLowerCase() === "done") {
+    break;
+  } else if (name === "") {
+    alert("Name cannot be empty. Please enter a valid name.");
+    continue;
   }
+  
   let phoneNumber = prompt("Enter the phone number:");
+  
+  if (phoneNumber === null) {
+    alert("Phone number input canceled.");
+    break;
+  } else if (phoneNumber === "") {
+    alert("Phone number cannot be empty. Please enter a valid number.");
+    continue;
+  }
+
   phoneBook.push({ name: name, phoneNumber: phoneNumber });
-  console.log(`${name}'s contact has been added!`);
+  console.log(`${name}'s contact has been added successfully!`);
 }
-console.log("Phone Book:");
-for (let i = 0; i < phoneBook.length; i++) {
-  console.log(`${i + 1}. Name: ${phoneBook[i].name}, Phone: ${phoneBook[i].phoneNumber}`);
+
+if (phoneBook.length > 0) {
+  console.log("Phone Book:");
+  for (let i = 0; i < phoneBook.length; i++) {
+    console.log(`${i + 1}. Name: ${phoneBook[i].name}, Phone: ${phoneBook[i].phoneNumber}`);
+  }
+} else {
+  console.log("The phone book is empty.");
 }
 
 //   Exercise 10

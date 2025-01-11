@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PhoneBook</title>
+  </head>
+  <body>
+    <h1>PhoneBook</h1>
+    <h2>Enter contact info:</h2>
+    <label>First Name:</label>
+    <input type="text" id="firstName" />
+    <label>Last Name:</label>
+    <input type="text" id="lastName" />
+    <label>Phone Number:</label>
+    <input type="text" id="phoneNumber" />
+    <input type="button" value="Save contact" id="saveBtn" />
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <script src="script.js"></script>
+  </body>
+</html>
