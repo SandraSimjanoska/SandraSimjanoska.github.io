@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="result">0</div>
+
+      <div class="buttons">
+        <button class="span-two" onclick="clearAll()">C</button>
+        <button onclick="deleteOne()">←</button>
+        <button onclick="calculatorInput('/')">÷</button>
+
+        <button onclick="calculatorInput('7')">7</button>
+        <button onclick="calculatorInput('8')">8</button>
+        <button onclick="calculatorInput('9')">9</button>
+        <button onclick="calculatorInput('*')">x</button>
+
+        <button onclick="calculatorInput('4')">4</button>
+        <button onclick="calculatorInput('5')">5</button>
+        <button onclick="calculatorInput('6')">6</button>
+        <button onclick="calculatorInput('-')">-</button>
+
+        <button onclick="calculatorInput('1')">1</button>
+        <button onclick="calculatorInput('2')">2</button>
+        <button onclick="calculatorInput('3')">3</button>
+        <button onclick="calculatorInput('+')">+</button>
+
+        <button onclick="calculatorInput('.')">.</button>
+        <button class="span-two" onclick="calculatorInput('0')">0</button>
+        <button onclick="calculate()" class="equals">=</button>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
