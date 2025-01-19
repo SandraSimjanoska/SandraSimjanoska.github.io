@@ -1,0 +1,55 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #d1e5bf; 
+  color: #212529; 
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem; 
+  color: #343a40; 
+  margin-bottom: 20px;
+}
+
+#hangman {
+  font-size: 1.5rem; 
+  margin: 20px 0;
+  letter-spacing: 2px; 
+  font-weight: bold;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #9851ad; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+button:hover {
+  background-color: #c84aca; 
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px); 
+}
+
+#hint {
+  background-color: #28a745; 
+}
+
+#hint:hover {
+  background-color: #218838; 
+}
+
+#lives {
+  font-size: 1.25rem;
+  margin-top: 10px;
+}

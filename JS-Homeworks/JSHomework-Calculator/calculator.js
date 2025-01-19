@@ -21,6 +21,9 @@ function calculateExpression(inputString) {
 
   for (let i = 0; i < operators.length; i++) {
     if (operators[i] === "*" || operators[i] === "/") {
+      if (operators[i] === "/" && numbers[i + 1] === 0) {
+        return "ERROR: Division by zero!";
+      }
       let result =
         operators[i] === "*"
           ? numbers[i] * numbers[i + 1]
@@ -44,10 +47,18 @@ function calculateExpression(inputString) {
   return finalResult;
 }
 
+let isResultDisplayed = false;
+
 function calculatorInput(inputValue) {
   let result = document.getElementById("result");
   let currentValue = result.innerHTML;
   let lastValue = currentValue.slice(-1);
+
+  if (isResultDisplayed && "0123456789".includes(inputValue)) {
+    result.innerHTML = inputValue;
+    isResultDisplayed = false;
+    return;
+  }
 
   if (
     inputValue === "." &&
@@ -57,13 +68,12 @@ function calculatorInput(inputValue) {
     return;
   }
 
-  if (currentValue === "0" && "0123456789".includes(inputValue)) {
-    if (inputValue === "0") {
-      return;
-    } else {
-      result.innerHTML = inputValue;
-      return;
-    }
+  if (
+    "+-*/".includes(inputValue) &&
+    currentValue === "" &&
+    inputValue !== "-"
+  ) {
+    return;
   }
 
   if ("+-*/".includes(inputValue) && "+-*/".includes(lastValue)) {
@@ -71,9 +81,11 @@ function calculatorInput(inputValue) {
       deleteOne();
       result.innerHTML += inputValue;
     }
-  } else {
-    result.innerHTML += inputValue;
+    return;
   }
+
+  result.innerHTML += inputValue;
+  isResultDisplayed = false;
 }
 
 function clearAll() {
@@ -89,5 +101,7 @@ function deleteOne() {
 function calculate() {
   let result = document.getElementById("result");
   let calculated = calculateExpression(result.innerHTML);
+
   result.innerHTML = calculated;
+  isResultDisplayed = true;
 }
