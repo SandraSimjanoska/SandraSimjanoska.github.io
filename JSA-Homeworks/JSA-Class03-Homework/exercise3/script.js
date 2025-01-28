@@ -24,7 +24,7 @@ function generateProducts(products) {
 
     card.innerHTML = `
             <div class="product-card">
-                <img src="${product.images}" class="card-img-top">
+                <img src="${product.images[0]}" class="card-img-top">
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">${product.description}</p>
             </div>

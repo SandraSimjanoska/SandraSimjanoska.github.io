@@ -24,7 +24,9 @@ function generateStudentsList(studentsArray) {
    console.log(studentsArray)
 }
 
-getDataBtn.addEventListener("click", function (){
+getDataBtn.addEventListener("click", fetchAndDisplay)
+
+function fetchAndDisplay(){
     fetch(url)
     .then(function (response) {
         console.log(response);
@@ -39,4 +41,4 @@ getDataBtn.addEventListener("click", function (){
     .catch(function (error) {
         console.log("ERROR:", error);
       });
-})
+}
