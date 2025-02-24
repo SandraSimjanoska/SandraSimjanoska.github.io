@@ -1,0 +1,24 @@
+1.Project folder structure
+2.Create the HTML Structure
+Add elements:
+-Header with logo and tagline
+-Category menu (dynamic list)
+-Product grid section
+-Shopping cart sidebar
+-Pagination controls
+-"Thank You" modal
+3.Design the Landing Page 
+-CSS 
+-Place cart as a sidebar
+-Align product cards properly
+5.Features
+-Fetch API
+-Render product cards
+-Fetch products from dummyjson.com
+-Handle pagination
+-Render product cards
+-Filter by category
+-Add/remove items
+-Calculate totals
+-Disable purchase button when empty
+-Clear cart on checkout

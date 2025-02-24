@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyMart</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">
+        <img src="assets/logo/EasyMartStore-logo.jpg" />
+      </div>
+      <div class="header-text">
+        <h1>EasyMart</h1>
+        <p class="tagline">Bringing Joy to Your Cart</p>
+      </div>
+    </header>
+
+    <main>
+
+      <aside id="category-menu">
+        <h3>Categories</h3>
+
+        <ul id="category-list">
+          <li><a href="#" data-category="all">All</a></li>
+          <li><a href="#" data-category="smartphones">Smartphones</a></li>
+          <li><a href="#" data-category="laptops">Laptops</a></li>
+          <li><a href="#" data-category="fragrances">Fragrances</a></li>
+          <li><a href="#" data-category="groceries">Groceries</a></li>
+          <li>
+            <a href="#" data-category="home-decoration">Home Decoration</a>
+          </li>
+          <li><a href="#" data-category="furniture">Furniture</a></li>
+          <li>
+            <a href="#" data-category="womens-dresses">Women's Dresses</a>
+          </li>
+          <li><a href="#" data-category="womens-shoes">Women's Shoes</a></li>
+          <li><a href="#" data-category="mens-shirts">Men's Shirts</a></li>
+          <li><a href="#" data-category="mens-shoes">Men's Shoes</a></li>
+          <li><a href="#" data-category="mens-watches">Men's Watches</a></li>
+          <li>
+            <a href="#" data-category="womens-watches">Women's Watches</a>
+          </li>
+          <li><a href="#" data-category="womens-bags">Women's Bags</a></li>
+          <li><a href="#" data-category="sunglasses">Sunglasses</a></li>
+          <li><a href="#" data-category="motorcycle">Motorcycle</a></li>
+        </ul>
+        
+      </aside>
+
+      <section id="product-grid"></section>
+
+      <aside id="shopping-cart">
+        <h3>Shopping Cart</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="checkout">Make Purchase</button>
+      </aside>
+
+      <div id="pagination">
+        <button id="prev-page">Previous</button>
+        <span id="page-info">Page 1</span>
+        <button id="next-page">Next</button>
+      </div>
+    </main>
+
+    <div id="thank-you-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Thank You! 🎉</h2>
+        <p>Your purchase has been completed successfully.</p>
+        <button id="close-modal-button">Close</button>
+      </div>
+    </div>
+
+
+
+    <script type="module" src="src/script.js"></script>
+
+  </body>
+</html>
