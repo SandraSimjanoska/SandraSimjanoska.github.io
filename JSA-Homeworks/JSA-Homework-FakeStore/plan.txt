@@ -14,11 +14,9 @@ Add elements:
 5.Features
 -Fetch API
 -Render product cards
--Fetch products from dummyjson.com
 -Handle pagination
--Render product cards
 -Filter by category
--Add/remove items
+-Add/remove items from cart
 -Calculate totals
 -Disable purchase button when empty
 -Clear cart on checkout
